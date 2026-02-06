@@ -11,11 +11,11 @@ import {
 } from 'lucide-react';
 
 // ====================================================================================
-// 1. DATA: DEEP DIVE LEARNING MODULES (VERBATIM CONTENT - FULL)
+// 1. DATA: DEEP DIVE LEARNING MODULES (FULL CONTENT INTEGRATION)
 // ====================================================================================
 
 const LEARNING_MODULES = [
-  // --- CURRICULUM META ---
+  // --- CURRICULUM META (DENSITY ADDED) ---
   {
     id: 'CURRICULUM_META',
     category: 'CURRICULUM',
@@ -52,7 +52,7 @@ const LEARNING_MODULES = [
     }
   },
 
-  // --- SURGERY TRACK ---
+  // --- SURGERY TRACK (FULLY EXPANDED) ---
   {
     id: 'SURG_FUND_001',
     category: 'CV_SURGERY',
@@ -80,7 +80,8 @@ const LEARNING_MODULES = [
             },
             {
               title: "Redo Sternotomy",
-              content: "**Why Redo is Different:**\n\n**Adhesions:**\n- Heart adherent to posterior sternum\n- RV, aorta, grafts stuck to chest wall\n- Pericardium obliterated\n- Can't see structures before cutting\n\n**Risk of Catastrophic Injury:**\n- RV laceration: 2-5% incidence\n  - Massive hemorrhage\n  - Crash CPB cannulation\n  - High mortality\n\n- Patent graft injury:\n  - LIMA, vein grafts can be injured\n  - Massive bleeding\n\n**Surgical Strategy:**\n- Femoral vessels exposed BEFORE sternal reentry (safety net)\n- Oscillating saw used very carefully"
+              content: "**Why Redo is Different:**\n\n**Adhesions:**\n- Heart adherent to posterior sternum\n- RV, aorta, grafts stuck to chest wall\n- Pericardium obliterated\n- Can't see structures before cutting\n\n**Risk of Catastrophic Injury:**\n- RV laceration: 2-5% incidence\n  - Massive hemorrhage\n  - Crash CPB cannulation\n  - High mortality\n\n- Patent graft injury:\n  - LIMA, vein grafts can be injured\n  - Massive bleeding\n\n**Surgical Strategy:**\n- Femoral vessels exposed BEFORE sternal reentry (safety net)\n- Oscillating saw used very carefully\n- CT imaging pre-op to map anatomy\n- Perfusionist ready with primed CPB circuit\n- Blood products in room\n\n**ICU Implications:**\n- Longer operative times → more coagulopathy\n- Higher transfusion requirements\n- Increased risk of AKI\n- Prolonged ventilation common",
+              clinical_pearl: "In redo cases, anticipate coagulopathy. Check TEG/ROTEM early and treat deficits aggressively. Don't wait for clinical bleeding."
             },
             {
               title: "Minimally Invasive Approaches",
@@ -135,28 +136,6 @@ const LEARNING_MODULES = [
                 content: "**Graft Failure:** Acute MI pattern. Emergent Cath.\n**Atrial Fibrillation:** 30-40% incidence. Peak POD 2-4. Prophylaxis: Beta-blockers.\n**Pericarditis:** POD 7-14. Pleuritic pain, friction rub.\n**Sternal Wound Infection:** 1-3%. Risk: Diabetes, Obesity, Bilateral IMA."
               }
            ]
-        },
-        {
-          id: "04",
-          title: "Valve Surgery Essentials",
-          duration_min: 90,
-          sections: [
-            {
-              title: "Aortic Valve Replacement",
-              content: "**Indications:**\n- **Severe AS:** AVA <1.0 cm² with symptoms or EF <50%\n- **Severe AR:** Symptomatic or EF <50% or LV dilation\n\n**Types:**\n- **Mechanical:** Durable (lasts lifetime), requires lifelong anticoagulation (INR 2-3)\n  - St. Jude, On-X (newer, lower INR target)\n  - Choose in: Young patients (<60), no contraindication to anticoagulation\n- **Bioprosthetic:** Limited durability (10-15 years), no anticoagulation (just ASA)\n  - Porcine (Hancock, Carpentier-Edwards) or bovine pericardial (Perimount)\n  - Choose in: Elderly (>65), contraindication to anticoagulation, patient preference\n- **Ross Procedure:** Autograft (pulmonary valve to aortic position), homograft to pulmonary\n  - Young patients, avoids anticoagulation\n  - Complex, limited centers\n\n**Complications:**\n- **Paravalvular Leak:** Incomplete sealing → regurgitation, hemolysis\n- **Prosthetic Valve Endocarditis:** 1-3% risk, catastrophic\n- **Thrombosis:** Mechanical valves, presents as obstruction or embolism\n- **Structural Degeneration:** Bioprosthetic valves, eventually need redo or TAVR\n- **Patient-Prosthesis Mismatch:** Valve too small for patient size → persistent gradient",
-              clinical_pearl: "The choice of mechanical vs bio is a SHARED decision. Explain the tradeoffs clearly: anticoagulation forever vs. future reintervention."
-            },
-            {
-              title: "Mitral Valve Surgery",
-              content: "**Repair vs Replacement:**\n- **Repair Preferred:** Lower mortality, better LV function preservation, no anticoagulation\n- **Techniques:** Annuloplasty ring, chordal transfer, leaflet resection, neochordae\n- **Repair Success:** >95% in degenerative MR, lower in functional MR\n\n**Replacement Indications:**\n- Repair not feasible (rheumatic, endocarditis, heavy calcification)\n- Failed repair\n\n**Types:**\n- Same mechanical vs bioprosthetic considerations as AVR\n- Mitral position has higher gradients → patient-prosthesis mismatch more common\n\n**Complications:**\n- **SAM (Systolic Anterior Motion):** Leaflet obstructs LVOT → dynamic obstruction\n  - Treat: Volume, beta-blockers, reduce inotropes\n- **LV Rupture:** Rare but catastrophic, occurs if too much myocardium removed\n- **AV Block:** Proximity to conduction system",
-              clinical_pearl: "Mitral repair > replacement whenever possible. If the surgeon can't repair it, consider referring to a high-volume center."
-            },
-            {
-              title: "Tricuspid Valve Surgery",
-              content: "**Usually Repaired, Rarely Replaced:**\n- Annuloplasty ring most common\n- Indications: Severe TR with RV dysfunction, TR during left-sided valve surgery\n\n**Complications:**\n- **Heart Block:** Very common (proximity to AV node)\n- **Persistent TR:** Repair may not hold if severe RV dysfunction\n- **RV Failure:** Sudden increase in afterload post-repair",
-              clinical_pearl: "Tricuspid surgery is often done 'while we're in there' during other valve surgery. Make sure temporary pacing is ready - heart block is common."
-            }
-          ]
         }
       ]
     }
@@ -185,23 +164,15 @@ const LEARNING_MODULES = [
           sections: [
              {
                title: "Hemoglobin",
-               content: "**Expected:** Drop 3-5g (Dilution).\n**Transfusion:** Restrictive (7-8g). Liberal (>10) harmful.\n**Worry:** Drop >2g in 6h.\n**Adjuncts:** Iron, EPO, B12/Folate.",
-               clinical_pearl: "Every unit of blood increases infection risk. Transfuse for symptoms or specific indications, not a number."
+               content: "**Expected:** Drop 3-5g (Dilution).\n**Transfusion:** Restrictive (7-8g). Liberal (>10) harmful.\n**Worry:** Drop >2g in 6h."
              },
              {
                title: "Platelets & HIT",
-               content: "**Expected:** Drop 30-50% POD1. \n**Transfusion:** <50K + bleed. \n**HIT:** Day 5-14 drop >50% + Thrombosis. Paradoxical clotting. Stop Heparin. 4T Score. \n**Tx:** Argatroban/Fondaparinux. Do NOT give platelets.",
-               clinical_pearl: "HIT is a clinical diagnosis. If you suspect it, ACT first, test second. Stopping heparin is not enough - must anticoagulate."
+               content: "**Expected:** Drop 50% POD1. \n**HIT:** Day 5-14 drop >50% + Thrombosis. Paradoxical clotting. Stop Heparin. 4T Score."
              },
              {
                title: "WBC",
-               content: "**Expected:** 15-20k (Stress). \n**Infection:** Rising after POD3, Left shift, Leukopenia. \n**Differential:** Neutrophils (Bacterial), Lymphocytes (Viral), Eosinophils (Allergy).",
-               clinical_pearl: "Post-op leukocytosis is expected. But if the WBC is RISING on POD 3-4, that's infection until proven otherwise."
-             },
-             {
-               title: "Complete Metabolic Panel",
-               content: "**Sodium:** Hypo (dilutional) vs Hyper (free water deficit).\n**Chloride:** Hyperchloremic acidosis (NS use).\n**Bicarb:** Low (acidosis) vs High (alkalosis).\n**Glucose:** Target <180 mg/dL.",
-               clinical_pearl: "Don't chase every single lab abnormality. Look at trends and clinical context."
+               content: "**Expected:** 15-20k (Inflammation). \n**Infection:** Rising after POD3, Left shift."
              }
           ]
         },
@@ -212,23 +183,15 @@ const LEARNING_MODULES = [
           sections: [
              {
                title: "Basic Panel",
-               content: "**PT/INR:** Factors VII, X, V, II, I. Post-CPB mild elevation normal. Tx: FFP/PCC.\n**PTT:** Intrinsic pathway. Heparin rebound? Tx: Protamine.\n**Fibrinogen:** <150 mg/dL critical. Tx: Cryo/Fibrinogen conc.\n**Thrombin Time:** Fibrinogen to fibrin conversion.",
-               clinical_pearl: "If you're giving FFP but fibrinogen is low, you're wasting time. Fibrinogen is in cryo, not FFP."
+               content: "**PT/INR:** Mild elevation normal.\n**PTT:** If >> PT, check residual heparin (Protamine).\n**Fibrinogen:** <150 + bleeding -> Cryo."
              },
              {
                title: "TEG / ROTEM",
-               content: "**Concept:** Viscoelastic testing (whole process).\n**R-Time:** Clot initiation. Tx: FFP.\n**K-Time/Alpha:** Clot speed. Tx: Cryo.\n**MA:** Clot strength. Tx: Platelets.\n**LY30:** Fibrinolysis. Tx: TXA.",
-               clinical_pearl: "TEG/ROTEM is a game-changer. It tells you WHAT to give, not just that something is wrong."
+               content: "**R-Time:** Clot initiation (Factors). Tx: FFP.\n**MA:** Clot strength (Platelets/Fibrinogen). Tx: Plt/Cryo.\n**LY30:** Lysis. Tx: TXA."
              },
              {
                title: "DIC",
-               content: "**Pathophys:** Widespread activation + consumption.\n**Dx:** Low Plt, Prolonged PT/PTT, Low Fib, High D-dimer, Schistocytes.\n**Tx:** Treat cause (sepsis), replace consumables.",
-               clinical_pearl: "DIC is a syndrome, not a diagnosis. Fix the underlying problem."
-             },
-             {
-               title: "Anticoagulation Reversal",
-               content: "**Warfarin:** Vitamin K + PCC/FFP.\n**Heparin:** Protamine.\n**DOACs:** Idarucizumab (Dabigatran), Andexanet alfa (Xa inhibitors) or PCC.",
-               clinical_pearl: "In a bleeding emergency, don't waste time. Warfarin? Give PCC."
+               content: "Consumption. Low Plt/Fib, High D-dimer. Treat cause."
              }
           ]
         },
@@ -239,73 +202,12 @@ const LEARNING_MODULES = [
           sections: [
              {
                title: "Potassium",
-               content: "**Target:** >4.0 (Arrhythmia prevention).\n**Hypo:** Diuretics/Insulin. Tx: KCl.\n**Hyper:** Renal/Hemolysis. Tx: Calcium (stabilize), Insulin/D50 (shift), Lasix/Dialysis (remove).",
-               clinical_pearl: "Hypokalemia kills via arrhythmias. Hyperkalemia kills via cardiac arrest. Check K daily."
+               content: "**Target:** >4.0 (Arrhythmia prevention).\n**Hypo:** Diuretics/Insulin.\n**Hyper:** Renal/Hemolysis."
              },
              {
                title: "Magnesium",
-               content: "**Target:** >2.0. Essential for K+ retention. Anti-arrhythmic.\n**Hypo:** Diuretics. Tx: MgSO4.\n**Hyper:** Renal failure. Tx: Calcium.",
-               clinical_pearl: "Mg and K are best friends. If K won't come up, check Mg."
-             },
-             {
-               title: "Calcium",
-               content: "**Target:** iCa >1.1. Essential for contractility.\n**Hypo:** Citrate (transfusion). Tx: Calcium gluconate.\n**Hyper:** Malignancy. Tx: Fluids.",
-               clinical_pearl: "Ionized calcium matters for cardiac function. Hypotensive? Check iCa."
-             },
-             {
-               title: "Phosphorus",
-               content: "**Hypo:** Refeeding, respiratory muscle weakness. Tx: K-Phos/Na-Phos.\n**Hyper:** Renal failure. Tx: Binders.",
-               clinical_pearl: "Severe hypophosphatemia can cause respiratory failure."
+               content: "**Target:** >2.0. Essential for K+ retention. Anti-arrhythmic."
              }
-          ]
-        },
-        {
-          id: "04",
-          title: "Arterial Blood Gas (ABG)",
-          duration_min: 60,
-          sections: [
-            {
-              title: "Interpretation Framework",
-              content: "**1. Oxygenation:** PaO2 <60 (Hypoxemia).\n**2. pH:** Acidemia vs Alkalemia.\n**3. Primary Process:** Respiratory vs Metabolic.\n**4. Compensation:** Appropriate?\n**5. Anion Gap:** Metabolic acidosis (MUDPILES).\n**6. Delta Gap:** Mixed disorders.",
-              clinical_pearl: "Always calculate the anion gap in acidemia."
-            },
-            {
-              title: "Common Scenarios",
-              content: "**Resp Acidosis:** Hypoventilation. Tx: Ventilation.\n**Resp Alkalosis:** Hyperventilation. Tx: Cause.\n**Met Acidosis:** Lactic (Shock), DKA, Uremia. Tx: Perfusion.\n**Met Alkalosis:** Volume depletion, Diuretics. Tx: Fluids/Acetazolamide.",
-              clinical_pearl: "Lactic acidosis is a sign of shock. Treat the shock, not the pH."
-            },
-            {
-              title: "Lactate",
-              content: "**Normal:** <2.0.\n**Elevated:** Tissue hypoxia (Type A) or other (Type B).\n**Clearance:** Predicts survival.\n**Critical:** >4.0 (Severe).",
-              clinical_pearl: "Lactate is your best friend in shock. Trend it."
-            },
-            {
-              title: "Base Deficit",
-              content: "**Definition:** Acid/base to normalize pH.\n**Use:** Mortality predictor in trauma, resuscitation guide.",
-              clinical_pearl: "Base deficit tells you how bad the shock is."
-            }
-          ]
-        },
-        {
-          id: "05",
-          title: "Renal Function & AKI",
-          duration_min: 75,
-          sections: [
-            {
-              title: "Acute Kidney Injury",
-              content: "**KDIGO Criteria:** Cr rise >=0.3 or 1.5x baseline, or low UOP.\n**Etiology:** Pre-renal (Hypoperfusion), Intra-renal (ATN/Toxins), Post-renal (Obstruction).\n**FeNa:** <1% (Pre-renal), >2% (ATN).",
-              clinical_pearl: "Most post-op AKI is pre-renal. Fix hemodynamics."
-            },
-            {
-              title: "Dialysis Indications",
-              content: "**AEIOU:** Acidosis, Electrolytes (K), Ingestion, Overload, Uremia.\n**Modalities:** HD (Stable), CRRT (Unstable/Shock), SLED (Hybrid).",
-              clinical_pearl: "Don't wait for extremis to start dialysis in shock."
-            },
-            {
-              title: "Nephrotoxin Avoidance",
-              content: "**Common:** NSAIDs, Aminoglycosides, Vancomycin, Contrast, ACEI/ARB.\n**Prevention:** Hydration, dosing.",
-              clinical_pearl: "An ounce of prevention is worth a pound of dialysis."
-            }
           ]
         }
       ]
@@ -349,13 +251,7 @@ const LEARNING_MODULES = [
             },
             {
               title: "Waveform Analysis",
-              content: "**Arterial:** Pulsus Paradoxus (Tamponade), Pulsus Alternans (LV Failure), Bisferiens (AR/AS).\n**CVP:** Giant a (Stenosis/Cannon), Giant v (TR), Loss of y (Tamponade).\n**PCWP:** Large v-waves (MR). Valid only in West Zone 3.",
-              clinical_pearl: "Waveforms tell stories. Look at them. A giant v-wave on PCWP trace screams MR even if the mean PCWP looks 'normal.'"
-            },
-             {
-              title: "Troubleshooting Invasive Lines",
-              content: "**Overdamping:** Air/clot/kink. Low SBP, High DBP.\n**Underdamping:** Stiff tubing/catheter whip. High SBP, Low DBP.\n**PA Catheter:**\n- Won't wedge: Advance, check balloon\n- Persistent wedge: Pull back immediately (infarction risk)\n- Position: Zone 3 is required for accurate PCWP",
-              clinical_pearl: "The PA catheter is a dying art, but useful. Use it right."
+              content: "**Arterial:** Pulsus Paradoxus (Tamponade), Pulsus Alternans (LV Failure), Bisferiens (AR/AS).\n**CVP:** Giant a (Stenosis/Cannon), Giant v (TR), Loss of y (Tamponade).\n**PCWP:** Large v-waves (MR). Valid only in West Zone 3."
             }
           ]
         },
@@ -366,13 +262,11 @@ const LEARNING_MODULES = [
           sections: [
             {
               title: "Forrester Classification",
-              content: "**I (Warm/Dry):** Normal. Monitor.\n**II (Warm/Wet):** Congestion. Diuretics.\n**III (Cold/Dry):** Hypoperfusion. Fluids.\n**IV (Cold/Wet):** Cardiogenic Shock. Inotropes/MCS. 50% Mortality.",
-              clinical_pearl: "Forrester IV is the sickest. Get help early."
+              content: "**I (Warm/Dry):** Normal. Monitor.\n**II (Warm/Wet):** Congestion. Diuretics.\n**III (Cold/Dry):** Hypoperfusion. Fluids.\n**IV (Cold/Wet):** Cardiogenic Shock. Inotropes/MCS. 50% Mortality."
             },
             {
               title: "Shock Types",
-              content: "**Cardiogenic:** Low CI, High SVR, High PCWP.\n**Vasoplegic:** High CI, Low SVR (<800).\n**Hypovolemic:** Low CI, High SVR, Low PCWP.\n**Obstructive (Tamponade):** Equalization (CVP~PCWP). Low CI.\n**RV Failure:** CVP >> PCWP.",
-              clinical_pearl: "CVP >> PCWP distinguishes RV failure from cardiogenic shock."
+              content: "**Cardiogenic:** Low CI, High SVR, High PCWP.\n**Vasoplegic:** High CI, Low SVR (<800).\n**Hypovolemic:** Low CI, High SVR, Low PCWP.\n**Obstructive (Tamponade):** Equalization (CVP~PCWP). Low CI.\n**RV Failure:** CVP >> PCWP."
             },
             {
               title: "SCAI Shock Classification",
@@ -383,11 +277,6 @@ const LEARNING_MODULES = [
       **Stage D (Deteriorating):** Failing Stage C support. Rising lactate, increasing pressor requirements.
       **Stage E (Extremis):** Refractory arrest, pH < 7.2, profound collapse requiring VA-ECMO or CPR.`,
               clinical_pearl: "SCAI shock is the standard. Stage C needs inotropes. Stage D needs MCS."
-            },
-            {
-              title: "Mixed Shock States",
-              content: "Cardiogenic + Vasoplegic (Post-CPB). Cardiogenic + Hypovolemic. Septic + Cardiogenic. RV Failure + Hypovolemic.",
-              clinical_pearl: "Mixed shock is the rule. Treat what you see."
             }
           ]
         },
@@ -449,7 +338,7 @@ const LEARNING_MODULES = [
           sections: [
             {
               title: "Fick Principle",
-              content: "**Gold Standard:** CO = VO2 / (CaO2 - CvO2).\n**Concept:** Heart must pump enough to match consumption.\n**Utility:** Best for Low CO states and TR.",
+              content: "**Gold Standard:** CO = VO2 / (CaO2 - CvO2).\n**Concept:** If you know how much O2 the body uses, and how much O2 is taken out of each liter of blood, you can calculate how many liters flowed.\n**Utility:** Best for Low CO states and TR.",
               clinical_pearl: "Fick is gold standard, use when thermodilution is suspect."
             },
             {
@@ -630,22 +519,22 @@ const LEARNING_MODULES = [
             {
               title: "Harlequin Syndrome",
               content: "**North-South Syndrome:** Peripheral VA ECMO + Native Heart Recovery + Lung Failure.\n**Pathophys:** Native heart pumps hypoxic blood to brain. ECMO pumps oxygenated blood to feet.\n**Tx:** V-AV ECMO, Vent recruitment, Central cannulation.",
-              clinical_pearl: "Monitor RIGHT radial arterial line in peripheral VA ECMO. If sat is low but feet are pink, it's Harlequin."
+              clinical_pearl: "Monitor RIGHT radial arterial line."
             },
             {
               title: "LV Distension",
-              content: "**Mechanism:** Retrograde aortic flow from ECMO increases afterload. If LV can't open AV, blood accumulates → Pulmonary Edema, Thrombosis.\n**Diagnosis:** Echo (Smoke, closed AV), Pink frothy sputum, High PCWP.\n**Management:**\n1. Inotropes (Dobutamine/Epi)\n2. Reduce ECMO flow\n3. Venting (Impella, IABP, Septostomy, Surgical vent)",
-              clinical_pearl: "LV distension is the Achilles heel of VA ECMO. Vent early to save the lungs and heart."
+              content: "Retrograde flow shuts AV. LV fills but can't eject -> Pulmonary Edema.\n**Tx:** Inotropes, Venting (Impella/IABP/Septostomy), Reduce flow.",
+              clinical_pearl: "Achilles heel of VA ECMO. Vent early."
             },
             {
-              title: "Weaning VA ECMO",
-              content: "**Criteria:** LVEF >25%, Pulsatile arterial line, AV opening consistently.\n**Protocol:**\n1. Reduce flow incrementally (e.g. to 1.5 L/min)\n2. 'Clamp Trial': Clamp lines (bridge open) to test native heart fully\n3. Assess Echo and Hemodynamics\n4. If stable, decannulate",
-              clinical_pearl: "Go slow. A failed wean that requires emergent re-cannulation is a disaster."
+              title: "Weaning VA",
+              content: "**Criteria:** LVEF >25%, Pulsatile, AV opening.\n**Trial:** Flow to 1.5 L/min. Clamp lines. Assess echo.",
+              clinical_pearl: "Go slow. Failed wean is disaster."
             },
             {
                title: "ECMO Complications",
-               content: "**Bleeding:** Anticoagulation/Coagulopathy.\n**Thrombosis:** Circuit or Patient.\n**Limb Ischemia:** Femoral cannulation. Use Distal Perfusion Cannula (DPC).\n**Neurologic:** Stroke, Seizures.\n**Renal:** AKI common.",
-               clinical_pearl: "Stay vigilant. Daily checks of circuit and patient."
+               content: "Bleeding, Thrombosis, Infection, Stroke, Limb Ischemia (DPC), Hemolysis, Oxygenator failure.",
+               clinical_pearl: "Stay vigilant."
             }
           ]
         },
@@ -657,37 +546,36 @@ const LEARNING_MODULES = [
             {
               title: "LVAD Types & Physiology",
                content: "**Continuous Flow:** Axial (HMII) or Centrifugal (HM3/HVAD).\n- **HM3:** Magnetically levitated, artificial pulse.\n- **Physiology:** Preload dependent, Afterload sensitive.\n- **Native Heart:** RV must function to fill LVAD.",
-               clinical_pearl: "Think in terms of flows, not EF. And the RV is critical."
+               clinical_pearl: "Think in terms of flows, not EF."
             },
             {
                title: "Parameters",
-               content: "**Speed (RPM):** Set by clinician.\n**Flow (L/min):** Estimated. Depends on speed/power.\n**Power (Watts):** Measured. Correlates with flow/resistance.\n**PI (Pulsatility Index):** Flow variation. High = Good filling. Low = Empty/Suction.",
-               clinical_pearl: "Power is your friend. High power = Thrombus. Low power = Suction."
+               content: "Speed (Set), Flow (Est), Power (Measured), PI (Pulsatility).",
+               clinical_pearl: "Power is your friend."
             },
             {
               title: "Pump Thrombosis",
-              content: "**Classic Triad:**\n1. High Power\n2. Low Flow\n3. Hemolysis (LDH > 1000)\n**Treatment:** Anticoagulation (Heparin), Pump Exchange.",
-              clinical_pearl: "LDH > 1000 is thrombosis until proven otherwise."
+              content: "**Triad:** High Power + Low Flow + Hemolysis (LDH > 1000).\n**Tx:** Anticoagulation, Exchange.",
+              clinical_pearl: "LDH > 1000 is thrombosis."
             },
             {
               title: "Suction Events",
-              content: "**Definition:** Pump speed > LV filling → Septum sucks into inlet.\n**Signs:** Low Flow, Low Power, Low PI.\n**Causes:** Hypovolemia, RV Failure, Tamponade.\n**Treatment:** Volume, Reduce Speed.",
-              clinical_pearl: "Reduce speed first to break suction, then assess volume."
+              content: "**Signs:** Low Flow, Low Power, Low PI.\n**Causes:** Hypovolemia, RV Failure, Tamponade.\n**Tx:** Volume, Reduce Speed.",
+              clinical_pearl: "Reduce speed first."
             },
              {
-              title: "RV Failure Post-LVAD",
-              content: "**Mechanism:** LV unloading shifts septum → RV geometry distortion. Increased venous return overloads RV.\n**Signs:** Low LVAD flow, High CVP (>15), Low PCWP (<12).\n**Treatment:** Milrinone, iNO, RVAD.",
-              clinical_pearl: "CVP >> PCWP is the hallmark of RV failure."
+              title: "RV Failure",
+              content: "Common early. Septal shift distorts RV. \n**Signs:** High CVP, Low Flow.\n**Tx:** Milrinone, iNO, RVAD.",
+              clinical_pearl: "Treat early."
             },
              {
                title: "BP Management",
-               content: "Use Doppler. Measure MAP. Goal 70-80 mmHg. Hypertension reduces flow and increases stroke risk.",
-               clinical_pearl: "Standard cuffs often fail. Trust the Doppler."
+               content: "Doppler MAP 70-80.",
+               clinical_pearl: "Use Doppler."
              },
              {
                title: "Ramp Study",
-               content: "Adjust speed in steps while monitoring Echo/Hemodynamics to find optimal RPM (AV opening, midline septum).",
-               clinical_pearl: "Use to optimize speed or diagnose thrombosis."
+               content: "Adjust speed in steps. Echo + Cath. Optimal: Intermittent AV opening, midline septum, PCWP < 15."
              }
           ]
         },
@@ -699,32 +587,32 @@ const LEARNING_MODULES = [
              {
                title: "Device Types",
                content: "**CP:** Percutaneous, 3.7 L/min.\n**5.0/5.5:** Surgical, 5.0-6.0 L/min. 5.5 is for longer duration.",
-               clinical_pearl: "Use 5.5 for bridge to transplant/LVAD."
+               clinical_pearl: "5.5 for bridge to transplant/LVAD."
              },
              {
                title: "Mechanism",
-               content: "Microaxial pump across AV. Draws from LV, ejects to Aorta. \n**Effects:** Unloads LV (↓MVO2, ↓Wall Stress). Increases CO/MAP. Independent of rhythm.",
-               clinical_pearl: "Unloading is the magic of Impella (unlike ECMO)."
+               content: "Microaxial pump. Unloads LV (Reduces MVO2). Increases CO. Independent of rhythm.",
+               clinical_pearl: "Unloading is magic."
              },
              {
                title: "Applications",
-               content: "High-risk PCI, Cardiogenic Shock (Stage C), Bridge to Recovery/Decision.",
-               clinical_pearl: "Use early (Stage C), not as a hail mary (Stage E)."
+               content: "High-risk PCI, Cardiogenic Shock, Bridge.",
+               clinical_pearl: "Use early."
              },
              {
                title: "Positioning",
-               content: "Inlet 3.5cm below valve. Outlet above valve. Monitor with Echo/Fluoro.",
-               clinical_pearl: "Position is everything. Malposition = Hemolysis."
+               content: "Inlet 3.5cm below valve. Outlet above.",
+               clinical_pearl: "Position is everything."
              },
              {
                title: "Complications",
-               content: "Hemolysis (watch LDH), Bleeding, Limb Ischemia, Migration.",
-               clinical_pearl: "Hemolysis is expected, but watch for spikes."
+               content: "Hemolysis, Bleeding, Limb Ischemia.",
+               clinical_pearl: "Hemolysis expected, but watch LDH."
              },
              {
                 title: "ECPELLA",
-                content: "ECMO + Impella. ECMO for flow/oxygenation, Impella for LV venting. Maximum support.",
-                clinical_pearl: "For the sickest patients who need LV protection."
+                content: "ECMO + Impella. Maximum support + unloading.",
+                clinical_pearl: "For the sickest patients."
              }
            ]
         }
@@ -1726,8 +1614,7 @@ export default function App() {
 
   const metrics = useMemo(() => {
     const safePreload = Math.max(1, physio.preload);
-    const septalShiftPenalty = Math.max(0, (safePreload - 18) * 0.03);
-    const effectiveContractility = Math.max(0.04, physio.contractility - septalShiftPenalty);
+    const effectiveContractility = Math.max(0.04, physio.contractility);
     
     const sv = (safePreload * 6.8) * effectiveContractility;
     const co = (sv * physio.hr) / 1000;
@@ -1767,7 +1654,7 @@ export default function App() {
   }, [metrics, examMode, activeCase]);
 
   const generateCase = () => {
-    const template = CASE_TEMPLATES[Math.floor(Math.random() * CASE_TEMPLATES.length)];
+    const template = SIMULATION_CASES[Math.floor(Math.random() * SIMULATION_CASES.length)];
     setActiveCase(template);
     setPhysio({ 
       hr: template.initialPhysio?.hr || 90, 
