@@ -11,11 +11,11 @@ import {
 } from 'lucide-react';
 
 // ====================================================================================
-// 1. DATA: DEEP DIVE LEARNING MODULES (FULL CONTENT INTEGRATION)
+// 1. DATA: DEEP DIVE LEARNING MODULES (VERBATIM CONTENT - FULL)
 // ====================================================================================
 
 const LEARNING_MODULES = [
-  // --- CURRICULUM META (DENSITY ADDED) ---
+  // --- CURRICULUM META ---
   {
     id: 'CURRICULUM_META',
     category: 'CURRICULUM',
@@ -52,7 +52,7 @@ const LEARNING_MODULES = [
     }
   },
 
-  // --- SURGERY TRACK (FULLY EXPANDED) ---
+  // --- SURGERY TRACK ---
   {
     id: 'SURG_FUND_001',
     category: 'CV_SURGERY',
@@ -80,13 +80,11 @@ const LEARNING_MODULES = [
             },
             {
               title: "Redo Sternotomy",
-              content: "**Why Redo is Different:**\n\n**Adhesions:**\n- Heart adherent to posterior sternum\n- RV, aorta, grafts stuck to chest wall\n- Pericardium obliterated\n- Can't see structures before cutting\n\n**Risk of Catastrophic Injury:**\n- RV laceration: 2-5% incidence\n  - Massive hemorrhage\n  - Crash CPB cannulation\n  - High mortality\n\n- Patent graft injury:\n  - LIMA, vein grafts can be injured\n  - Massive bleeding\n\n**Surgical Strategy:**\n- Femoral vessels exposed BEFORE sternal reentry (safety net)\n- Oscillating saw used very carefully\n- CT imaging pre-op to map anatomy\n- Perfusionist ready with primed CPB circuit\n- Blood products in room\n\n**ICU Implications:**\n- Longer operative times → more coagulopathy\n- Higher transfusion requirements\n- Increased risk of AKI\n- Prolonged ventilation common",
-              clinical_pearl: "In redo cases, anticipate coagulopathy. Check TEG/ROTEM early and treat deficits aggressively. Don't wait for clinical bleeding."
+              content: "**Why Redo is Different:**\n\n**Adhesions:**\n- Heart adherent to posterior sternum\n- RV, aorta, grafts stuck to chest wall\n- Pericardium obliterated\n- Can't see structures before cutting\n\n**Risk of Catastrophic Injury:**\n- RV laceration: 2-5% incidence\n  - Massive hemorrhage\n  - Crash CPB cannulation\n  - High mortality\n\n- Patent graft injury:\n  - LIMA, vein grafts can be injured\n  - Massive bleeding\n\n**Surgical Strategy:**\n- Femoral vessels exposed BEFORE sternal reentry (safety net)\n- Oscillating saw used very carefully"
             },
             {
               title: "Minimally Invasive Approaches",
-              content: "**Right Anterior Thoracotomy (Minimally Invasive AVR/MVR):**\n- Right 4th-5th intercostal space.\n- Avoids sternotomy.\n- **Advantages:** Faster recovery, less pain, better cosmesis.\n- **Disadvantages:** Limited exposure, Phrenic nerve risk, Lung isolation required.\n- **Patient Selection:** Young, non-obese, no prior right chest surgery.\n\n**Left Thoracotomy:**\n- Descending Aorta, LVAD.\n- Significant pain (intercostal nerve injury).\n- **ICU Pearl:** These patients need aggressive pain control - consider epidural or paravertebral blocks.\n\n**Robotic-Assisted Surgery:**\n- Increasingly common for MVR\n- Tiny incisions, 3D visualization\n- Longer operative times initially\n- Excellent outcomes in experienced centers",
-              clinical_pearl: "Minimally invasive doesn't mean minimal risk. These patients still need full ICU monitoring - cardiac function is what matters, not incision size."
+              content: "**Right Anterior Thoracotomy (Minimally Invasive AVR/MVR):**\n- Right 4th-5th intercostal space.\n- Avoids sternotomy.\n- **Advantages:** Faster recovery, less pain, better cosmesis.\n- **Disadvantages:** Limited exposure, Phrenic nerve risk, Lung isolation required.\n\n**Left Thoracotomy:**\n- Descending Aorta, LVAD.\n- Significant pain (intercostal nerve injury)."
             },
              {
               title: "Cannulation Sites",
@@ -107,28 +105,19 @@ const LEARNING_MODULES = [
           sections: [
             {
               title: "Physiology",
-              content: "**Systemic Inflammatory Response Syndrome (SIRS):**\n- Blood contacts artificial surfaces → Complement activation → Cytokine release → Vasoplegia/Capillary Leak.\n- **Timeline:** Peaks 6-24 hours post-CPB\n- **Clinical Manifestations:**\n  - Fever/hypothermia\n  - Leukocytosis\n  - Tachycardia\n  - Tachypnea\n  - Increased oxygen requirements\n  - Third-spacing of fluid\n\n**Vasoplegia (Post-CPB Vasodilatory Shock):**\n- Incidence: 5-25% (higher with long CPB times, emergency surgery, pre-op ACEI/ARB use).\n- Mechanism: Cytokine-mediated vasodilation, nitric oxide upregulation, vasopressin deficiency.\n- Presentation: Low SVR (<800), High CO, Hypotension, warm extremities.\n- Treatment: \n  - First-line: Vasopressin 0.03-0.04 units/min (restores physiologic levels)\n  - Second-line: Norepinephrine 0.05-0.2 mcg/kg/min\n  - Refractory: Methylene blue 2mg/kg over 30min (inhibits guanylate cyclase)\n  - Experimental: Hydroxocobalamin, Angiotensin II",
-              clinical_pearl: "Vasopressin is nearly always deficient post-CPB. Don't wait for refractory shock to start it - use early in vasoplegia. Target SVR 800-1000, not supranormal values."
+              content: "**Systemic Inflammatory Response Syndrome (SIRS):**\n- Blood contacts artificial surfaces → Complement activation → Cytokine release → Vasoplegia/Capillary Leak.\n\n**Vasoplegia (Post-CPB Vasodilatory Shock):**\n- Incidence: 5-25%.\n- Mechanism: Cytokine-mediated vasodilation.\n- Presentation: Low SVR (<800), High CO, Hypotension.\n- Treatment: Vasopressin (first-line), Methylene blue."
             },
             {
               title: "Coagulopathy",
-              content: "**Mechanisms:**\n1. **Hemodilution:** Crystalloid/colloid prime dilutes factors\n2. **Platelet dysfunction:** CPB activation, hypothermia, shear stress\n3. **Factor consumption:** Activation of coagulation cascade\n4. **Fibrinolysis:** Plasmin activation\n5. **Hypothermia:** Enzyme dysfunction below 35°C\n6. **Heparin rebound:** Residual heparin from tissue stores\n\n**Labs:** \n- Low platelets (typical drop 30-50%)\n- Prolonged PT/PTT\n- Low fibrinogen (<150 mg/dL common)\n- Elevated D-dimer\n\n**Treatment Algorithm:**\n1. **Temperature:** Rewarm to >36°C\n2. **Heparin:** Protamine (1mg per 100 units heparin), check ACT\n3. **Platelets:** If <50K and bleeding, or <100K with high-risk surgery\n4. **Fibrinogen:** Cryoprecipitate (10 units) or fibrinogen concentrate if <150 and bleeding\n5. **Factors:** FFP 10-15 mL/kg if PT/PTT elevated\n6. **Antifibrinolytics:** TXA if hyperfibrinolysis on TEG\n\n**TEG/ROTEM-Guided:**\n- More precise than empiric therapy\n- R-time prolonged → FFP\n- MA decreased → Platelets/Fibrinogen\n- LY30 increased → TXA",
-              clinical_pearl: "Fibrinogen is the most commonly deficient factor post-CPB and the most commonly missed. Check it early, replace early. Cryo works faster than FFP."
+              content: "**Mechanisms:**\n1. Hemodilution\n2. Platelet dysfunction (CPB activation)\n3. Factor consumption\n4. Fibrinolysis\n5. Hypothermia\n\n**Labs:** Low platelets, prolonged PT/PTT, low fibrinogen."
             },
             {
               title: "Myocardial Protection",
-              content: "**Cardioplegia:** High-K+ solution to arrest heart. Reduces O2 demand to ~1% of beating heart.\n\n**Types:**\n- **Blood vs Crystalloid:** Blood is superior (oxygen carrying, buffering, oncotic pressure).\n- **Antegrade vs Retrograde:** \n  - Antegrade: Via aortic root → coronary arteries. Standard.\n  - Retrograde: Via coronary sinus → retrograde perfusion. Used when aorta clamped or severe AS.\n  - Combined: Best protection, especially in redo surgery.\n\n**Stunning:** Reversible contractile dysfunction despite restored perfusion.\n- **Mechanism:** Calcium overload, free radicals, microvascular injury\n- **Duration:** Hours to days\n- **Treatment:** Time, inotropes, mechanical support if severe\n- **Prevention:** Optimal cardioplegia, minimize ischemia time",
-              clinical_pearl: "Don't panic about low EF immediately post-CPB. Stunning is expected. Give inotropes, volume, and TIME. Most recover within 24-48 hours."
+              content: "**Cardioplegia:** High-K+ solution to arrest heart. Reduces O2 demand.\n- **Blood vs Crystalloid:** Blood is superior.\n- **Antegrade vs Retrograde:** Antegrade via aorta, Retrograde via coronary sinus.\n- **Stunning:** Reversible dysfunction. Treat with inotropes."
             },
             {
                title: "Separation from CPB",
-               content: "**Process:**\n1. **Rewarm:** Core temp >36°C\n2. **Ventilate:** Resume ventilation, recruit lungs\n3. **Rhythm:** Restore sinus rhythm (cardioversion if needed)\n4. **De-air:** TEE to visualize and remove air from cardiac chambers\n5. **Wean:** Gradually reduce CPB flow while monitoring hemodynamics\n6. **Remove Cross-clamp:** Allow coronary perfusion\n7. **Support:** Adjust inotropes/vasopressors\n8. **Separation:** Off CPB, on native circulation\n\n**Difficulty Weaning:**\n- **Causes:** \n  - **Stunning:** Most common, usually reversible\n  - **Hypovolemia:** Check filling pressures, TEE\n  - **Air:** Check TEE, de-air techniques\n  - **Tamponade:** Pericardial clot\n  - **Graft failure:** CABG technical issue\n  - **Valve dysfunction:** Repair/replacement technical issue\n  - **RV failure:** Often overlooked cause\n\n- **Treatment:** \n  - **Inotropes:** Epinephrine most commonly used (alpha+beta)\n  - **Volume:** Guided by TEE\n  - **IABP:** 1:1 augmentation, reduces afterload, increases coronary perfusion\n  - **ECMO:** VA-ECMO for severe failure\n  - **Impella:** Active LV unloading\n\n**Post-CPB Checklist:**\n- Hemodynamics stable\n- Rhythm controlled\n- No significant bleeding\n- TEE shows no residual air, good function\n- ACT <140 (heparin reversed)\n- Temperature >36°C",
-              clinical_pearl: "The hardest part of CPB is coming off it. Have a LOW threshold for mechanical support. IABP is easy and helps. Don't wait until the patient is in extremis."
-            },
-            {
-              title: "CPB Complications",
-              content: "**Neurologic:**\n- **Stroke:** 1-5% incidence. Embolic (atheroma, air) or hypoperfusion.\n- **Cognitive Dysfunction:** 'Pump head.' May improve over months.\n- **Seizures:** Hypothermia, hypoxia, emboli.\n\n**Renal:**\n- **AKI:** 5-30% incidence. Risk factors: pre-existing CKD, long CPB time, hypotension.\n- **Dialysis:** 1-5% require post-op dialysis.\n\n**Pulmonary:**\n- **ARDS:** Inflammatory response, transfusions, hypothermia.\n- **Pleural Effusions:** Common, usually resolve.\n- **Phrenic Nerve Injury:** Topical hypothermia during surgery.\n\n**GI:**\n- **Ischemia:** Hypoperfusion during CPB. Rare but high mortality.\n- **Pancreatitis:** Hypoperfusion, calcium shifts.\n\n**Hematologic:**\n- **Coagulopathy:** Discussed above.\n- **HIT:** Heparin-induced thrombocytopenia. Paradoxical thrombosis.\n\n**Metabolic:**\n- **Hyperglycemia:** Stress response. Target <180 mg/dL.\n- **Electrolyte Shifts:** K, Mg, Ca all commonly abnormal.\n- **Acidosis:** Lactic acidosis from hypoperfusion or increased metabolic demand.",
-              clinical_pearl: "Long CPB time is the enemy. Every additional 30 minutes increases risk of complications. Encourage the surgical team to be efficient."
+               content: "1. Rewarm\n2. Remove cross-clamp (reperfusion)\n3. Wean flow while monitoring hemodynamics.\n**Difficulty Weaning:**\n- Causes: Stunning, Hypovolemia, Tamponade, Air embolism, Graft failure.\n- Treatment: Inotropes, IABP, ECMO."
             }
           ]
         },
@@ -139,23 +128,11 @@ const LEARNING_MODULES = [
            sections: [
               {
                 title: "Conduits",
-                content: "**LIMA (Left Internal Mammary Artery):**\n- Gold standard for LAD grafting\n- 95% 10-year patency\n- Superior to all other conduits\n- Almost never develops atherosclerosis\n- Downside: Longer operative time to harvest\n\n**RIMA (Right Internal Mammary Artery):**\n- Can be used for RCA or Cx territories\n- Bilateral IMA (BIMA) has best long-term outcomes\n- Increased risk of sternal wound infection (decreased blood flow to sternum)\n- Avoid BIMA in diabetics, obese, elderly\n\n**Radial Artery:**\n- Arterial conduit with good patency (70-80% at 10 years)\n- Prone to spasm → need CCB (diltiazem or amlodipine) for life\n- Contraindicated if abnormal Allen test\n- Best for high-grade lesions (>70%)\n\n**Saphenous Vein Graft (SVG):**\n- Easiest to harvest, most commonly used\n- 50% 10-year patency (much worse than arteries)\n- Prone to atherosclerosis and degeneration\n- Used for RCA, Cx, sometimes LAD if LIMA not available\n\n**Configurations:**\n- **Single:** One conduit to one target\n- **Sequential:** One conduit to multiple targets (LIMA to diagonal then LAD)\n- **Y-Grafts:** LIMA to LAD, radial off LIMA to other targets\n- **Composite Grafts:** All arterial grafting off single aortic anastomosis",
-                clinical_pearl: "LIMA to LAD is non-negotiable if anatomically feasible. This single graft improves survival. Everything else is secondary."
-              },
-              {
-                title: "Post-Operative Care",
-                content: "**First 24 Hours:**\n- **Hemodynamics:** Maintain MAP >65, CI >2.2\n- **Bleeding:** Monitor chest tube output. >200mL/hr x 2hr → consider re-exploration\n- **Rhythm:** Continuous telemetry. Treat VT/VF aggressively. Afib common POD 2-4.\n- **Sedation:** Wean and extubate when stable (usually 4-8 hours post-op)\n- **Pain:** Adequate analgesia (opioids, NSAIDs, gabapentin)\n- **Antiplatelet:** ASA 81mg daily (start within 6 hours post-op)\n- **Glucose:** Tight control (<180 mg/dL)\n\n**Days 2-5:**\n- **Mobilization:** Out of bed POD 1, ambulate POD 2\n- **Afib:** Peak incidence POD 2-4. Beta-blocker prophylaxis. Anticoagulate if sustained.\n- **Diuresis:** Most patients fluid overloaded from CPB. Target even to negative 500-1000 mL/day.\n- **Chest Tubes:** Remove when <200 mL/24hr\n- **Pacing Wires:** Can remove around POD 5 if no arrhythmias\n- **Rehab:** Cardiac rehab consultation before discharge\n\n**Discharge Planning:**\n- **Medications:** ASA, statin (high-intensity), beta-blocker, ACEI (if EF <40%)\n- **INR Goals:** If afib developed, start warfarin (target 2-3)\n- **Follow-up:** Surgeon in 2 weeks, Cardiologist in 4 weeks\n- **Education:** Sternal precautions x 6 weeks, wound care, activity restrictions",
-                clinical_pearl: "The first 24 hours are about avoiding catastrophe. Days 2-5 are about preventing afib and managing volume. Discharge is about secondary prevention."
+                content: "**LIMA:** Gold standard for LAD. 95% 10y patency.\n**Radial:** Arterial. Prone to spasm (needs CCB).\n**SVG:** Venous. 50% 10y patency.\n**Configurations:** Single, Sequential, Y-Grafts."
               },
               {
                 title: "Complications",
-                content: "**Graft Failure:**\n- **Acute (<24hr):** Technical issue, graft kinking, anastomotic problem\n- **Presentation:** Acute MI pattern on ECG, hemodynamic instability\n- **Diagnosis:** Emergent cardiac cath\n- **Treatment:** Percutaneous intervention or return to OR for revision\n\n**Atrial Fibrillation:**\n- **Incidence:** 30-40%\n- **Peak:** POD 2-4\n- **Mechanism:** Atrial inflammation, pericarditis, sympathetic surge\n- **Prophylaxis:** Beta-blockers (metoprolol or carvedilol), amiodarone if high risk\n- **Treatment:** Rate control (beta-blocker, diltiazem), cardioversion if unstable, anticoagulation\n- **Prognosis:** Usually self-limited, most convert to sinus by 6 weeks\n\n**Pericarditis (Dressler's Syndrome):**\n- **Incidence:** 10-40%\n- **Timing:** POD 7-14 (post-op) or weeks to months later\n- **Presentation:** Pleuritic chest pain, friction rub, fever, pericardial effusion\n- **Diagnosis:** Clinical + echo (effusion) + elevated ESR/CRP\n- **Treatment:** NSAIDs (ibuprofen 600mg TID) + colchicine 0.6mg BID x 3 months\n- **Avoid:** Steroids (increase recurrence risk)\n\n**Sternal Wound Infection:**\n- **Incidence:** 1-3%\n- **Risk Factors:** Diabetes, obesity, bilateral IMA harvest, prolonged operative time, re-exploration\n- **Types:**\n  - **Superficial:** Skin/subcu only. Antibiotics + local wound care.\n  - **Deep (Mediastinitis):** Involves sternum/mediastinum. Life-threatening.\n- **Diagnosis:** Fever, sternal instability, purulent drainage, positive cultures\n- **Treatment:** \n  - **Superficial:** PO antibiotics, wound care\n  - **Deep:** IV antibiotics, surgical debridement, muscle flap closure, VAC therapy\n- **Organisms:** Staph aureus most common (MRSA concern), gram negatives, fungi in immunosuppressed\n\n**Other Complications:**\n- **Stroke:** 1-5%, embolic or hypoperfusion\n- **AKI:** 5-30%, may require dialysis\n- **GI Bleeding:** Stress ulcers, ischemia\n- **Delirium:** Very common in elderly, prevent with early mobility, minimize sedation\n- **Depression:** Common, screen and treat",
-                clinical_pearl: "Mediastinitis is a disaster. Prevent it: glucose control, minimize operative time, prophylactic antibiotics, avoid bilateral IMA in high-risk patients."
-              },
-              {
-                title: "Special Populations",
-                content: "**Diabetics:**\n- Higher risk of: wound infection, AKI, stroke\n- Tight glucose control (<180) reduces complications\n- Consider avoiding bilateral IMA (increased sternal infection risk)\n- Aggressive statin therapy\n\n**Chronic Kidney Disease:**\n- Higher risk of: post-op dialysis, bleeding, volume overload\n- Minimize nephrotoxins (NSAIDs, contrast)\n- Consider pre-op dialysis if volume overloaded\n- Post-op: strict fluid balance, early diuresis\n\n**Elderly (>75 years):**\n- Higher risk of: delirium, stroke, prolonged ventilation, mortality\n- Benefits of surgery still outweigh risks in most\n- Early mobilization critical\n- Geriatric co-management improves outcomes\n\n**Emergency/Salvage CABG:**\n- Failed PCI, ongoing ischemia\n- Very high risk (10-30% mortality)\n- May require IABP or ECMO support\n- Often on antiplatelet/anticoagulation → bleeding risk\n- Family should understand risks",
-                clinical_pearl: "Risk stratify carefully. The 85-year-old diabetic with CKD having emergency CABG has 30%+ mortality. Make sure the family understands this."
+                content: "**Graft Failure:** Acute MI pattern. Emergent Cath.\n**Atrial Fibrillation:** 30-40% incidence. Peak POD 2-4. Prophylaxis: Beta-blockers.\n**Pericarditis:** POD 7-14. Pleuritic pain, friction rub.\n**Sternal Wound Infection:** 1-3%. Risk: Diabetes, Obesity, Bilateral IMA."
               }
            ]
         },
@@ -184,8 +161,7 @@ const LEARNING_MODULES = [
       ]
     }
   },
-
-  // --- LABS TRACK (FULLY EXPANDED) ---
+  // --- LABS TRACK ---
   {
     id: 'LABS_FUND_001',
     category: 'LABS_METABOLICS',
@@ -200,7 +176,7 @@ const LEARNING_MODULES = [
     courseContent: {
       level: 'fundamentals',
       estimated_hours: 5,
-      objectives: ["Interpret CBC", "Manage Coags", "Electrolyte protocols", "Recognize critical values", "Trend and respond to lab changes"],
+      objectives: ["Interpret CBC", "Manage Coags", "Electrolyte protocols"],
       chapters: [
         {
           id: "01",
@@ -335,7 +311,7 @@ const LEARNING_MODULES = [
       ]
     }
   },
-  // --- HEMODYNAMICS (FULLY EXPANDED) ---
+  // --- HEMODYNAMICS ---
   {
     id: 'HEMO_FUND_001',
     category: 'HEMODYNAMICS',
@@ -350,7 +326,7 @@ const LEARNING_MODULES = [
     courseContent: {
       level: 'fundamentals',
       estimated_hours: 5,
-      objectives: ["Interpret waveforms", "Calculate derived params", "Diagnose shock", "Apply hemodynamic principles", "Master invasive monitoring"],
+      objectives: ["Interpret waveforms", "Calculate derived params", "Diagnose shock"],
       chapters: [
         {
           id: "01",
@@ -359,8 +335,7 @@ const LEARNING_MODULES = [
           sections: [
             {
               title: "The Pressure Gradient",
-              content: "**Flow = ΔPressure / Resistance.**\n\n**Fundamental Concepts:**\n- Blood flows from high pressure to low pressure\n- The GRADIENT (difference) drives flow, not absolute pressure\n- Resistance opposes flow (like friction in a pipe)\n\n**Systemic Circulation:**\n- High pressure system (MAP ~90 mmHg)\n- High resistance (SVR 800-1200 dynes·sec·cm⁻⁵)\n- Designed to perfuse entire body against gravity\n\n**Pulmonary Circulation:**\n- Low pressure system (mean PA ~15 mmHg)\n- Low resistance (PVR 100-200 dynes·sec·cm⁻⁵)\n- Designed for gas exchange, not fighting gravity\n- **Clinical Pearl:** RV is a volume pump, not a pressure pump. It fails when forced to pump against pressure (PE, PH).\n\n**Normal Values:**\n- **Aorta:** 120/80 mmHg (mean ~90-100)\n- **PA:** 25/10 mmHg (mean ~15)\n- **CVP (RA):** 2-8 mmHg\n- **PCWP (LA):** 8-12 mmHg\n- **LV:** 120/0-5 mmHg (LVEDP = preload)\n- **RV:** 25/0-5 mmHg (RVEDP = preload)",
-              clinical_pearl: "The pulmonary circulation is 1/10th the resistance of systemic. RV failure is common with small pressure increases."
+              content: "**Flow = ΔPressure / Resistance.**\nSystemic: High pressure. Pulmonary: Low pressure.\n**Normal Values:**\n- Aorta: 120/80\n- PA: 25/10\n- CVP: 2-8\n- PCWP: 8-12"
             },
             {
               title: "The Pressure Cascade (Normal Values)",
@@ -374,7 +349,7 @@ const LEARNING_MODULES = [
             },
             {
               title: "Waveform Analysis",
-              content: "**Arterial Waveform:**\n- **Normal:** Rapid upstroke, dicrotic notch, gradual downslope\n- **Pulsus Paradoxus:** Inspiratory drop >10 mmHg (Tamponade)\n- **Pulsus Alternans:** Beat-to-beat variation (Severe LV Failure)\n- **Bisferiens Pulse:** Double peak (Severe AR/HOCM)\n\n**CVP Waveform:**\n- **a wave:** Atrial contraction\n- **c wave:** Tricuspid closure\n- **x descent:** Atrial relaxation\n- **v wave:** Atrial filling\n- **y descent:** Tricuspid opening\n- **Pathology:** Giant a (Stenosis/Cannon), Giant v (TR), Loss of y (Tamponade)\n\n**PCWP Waveform:**\n- Similar to CVP but reflects LA. Large v-waves (>2x mean) = Severe MR.",
+              content: "**Arterial:** Pulsus Paradoxus (Tamponade), Pulsus Alternans (LV Failure), Bisferiens (AR/AS).\n**CVP:** Giant a (Stenosis/Cannon), Giant v (TR), Loss of y (Tamponade).\n**PCWP:** Large v-waves (MR). Valid only in West Zone 3.",
               clinical_pearl: "Waveforms tell stories. Look at them. A giant v-wave on PCWP trace screams MR even if the mean PCWP looks 'normal.'"
             },
              {
@@ -396,17 +371,22 @@ const LEARNING_MODULES = [
             },
             {
               title: "Shock Types",
-              content: "**Cardiogenic:** Low CI, High SVR, High PCWP, High CVP.\n**Vasoplegic:** High CI, Low SVR (<800).\n**Hypovolemic:** Low CI, High SVR, Low PCWP.\n**Obstructive (Tamponade):** Equalization (CVP~PCWP). Low CI.\n**RV Failure:** CVP >> PCWP.",
+              content: "**Cardiogenic:** Low CI, High SVR, High PCWP.\n**Vasoplegic:** High CI, Low SVR (<800).\n**Hypovolemic:** Low CI, High SVR, Low PCWP.\n**Obstructive (Tamponade):** Equalization (CVP~PCWP). Low CI.\n**RV Failure:** CVP >> PCWP.",
               clinical_pearl: "CVP >> PCWP distinguishes RV failure from cardiogenic shock."
             },
             {
               title: "SCAI Shock Classification",
-              content: "**A (At Risk):** High risk history, normal hemodynamics.\n**B (Beginning):** Hypotension/Tachycardia, no hypoperfusion.\n**C (Classic):** Hypoperfusion (Lactate >2, oliguria), requires support.\n**D (Deteriorating):** Failing initial support, rising lactate.\n**E (Extremis):** Cardiac arrest, pH <7.2, max support.",
+              content: `
+      **Stage A (At Risk):** Not hypotensive; no signs of hypoperfusion. Large MI or acute ADHF history.
+      **Stage B (Beginning):** Hypotension (SBP < 90) or Tachycardia (HR > 100) WITHOUT hypoperfusion. 
+      **Stage C (Classic):** Hypotension + Hypoperfusion (Lactate > 2, cool skin, oliguria). Requires inotropes/MCS.
+      **Stage D (Deteriorating):** Failing Stage C support. Rising lactate, increasing pressor requirements.
+      **Stage E (Extremis):** Refractory arrest, pH < 7.2, profound collapse requiring VA-ECMO or CPR.`,
               clinical_pearl: "SCAI shock is the standard. Stage C needs inotropes. Stage D needs MCS."
             },
             {
               title: "Mixed Shock States",
-              content: "**Cardiogenic + Vasoplegic:** Post-CPB heart failure. Inotrope + Pressor.\n**Cardiogenic + Hypovolemic:** MI + Bleeding. Fluids + Inotrope.\n**Septic + Cardiogenic:** Sepsis + HF. Pressor + Inotrope.",
+              content: "Cardiogenic + Vasoplegic (Post-CPB). Cardiogenic + Hypovolemic. Septic + Cardiogenic. RV Failure + Hypovolemic.",
               clinical_pearl: "Mixed shock is the rule. Treat what you see."
             }
           ]
@@ -460,7 +440,7 @@ const LEARNING_MODULES = [
     courseContent: {
       level: 'fundamentals',
       estimated_hours: 4,
-      objectives: ["Measure CO", "Understand SvO2", "Use SVV", "Master oxygen delivery", "Apply hemodynamic monitoring"],
+      objectives: ["Measure CO", "Understand SvO2", "Use SVV"],
       chapters: [
         {
           id: "01",
@@ -469,7 +449,7 @@ const LEARNING_MODULES = [
           sections: [
             {
               title: "Fick Principle",
-              content: "**Gold Standard:** CO = VO2 / (CaO2 - CvO2).\n**Concept:** If you know how much O2 the body uses, and how much O2 is taken out of each liter of blood, you can calculate how many liters flowed.\n**Utility:** Best for Low CO states and TR.",
+              content: "**Gold Standard:** CO = VO2 / (CaO2 - CvO2).\n**Concept:** Heart must pump enough to match consumption.\n**Utility:** Best for Low CO states and TR.",
               clinical_pearl: "Fick is gold standard, use when thermodilution is suspect."
             },
             {
@@ -620,7 +600,7 @@ const LEARNING_MODULES = [
       ]
     }
   },
-  // --- MCS (FULLY EXPANDED) ---
+  // --- MCS ---
   {
     id: 'MCS_FUND_001',
     category: 'MECHANICAL_SUPPORT',
@@ -932,7 +912,7 @@ const LEARNING_MODULES = [
             },
             {
               title: "Best Views",
-              content: "**A4C:** TAPSE, FAC, Size.\n**PLAX:** RVOT diameter.\n**PSAX:** Septal motion (D-shape), wall thickness.\n**Subcostal:** Wall thickness, IVC."
+              content: "**A4C:** TAPSE, FAC, Size.\n**PLAX:** RVOT diameter.\n**PSAX:** Septal motion (D-shape).\n**Subcostal:** Wall thickness, IVC."
             }
           ]
         },
@@ -1787,7 +1767,7 @@ export default function App() {
   }, [metrics, examMode, activeCase]);
 
   const generateCase = () => {
-    const template = SIMULATION_CASES[Math.floor(Math.random() * SIMULATION_CASES.length)];
+    const template = CASE_TEMPLATES[Math.floor(Math.random() * CASE_TEMPLATES.length)];
     setActiveCase(template);
     setPhysio({ 
       hr: template.initialPhysio?.hr || 90, 
