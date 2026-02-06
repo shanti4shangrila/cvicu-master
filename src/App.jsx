@@ -1541,13 +1541,13 @@ const CASE_TEMPLATES = [
 // 4. HELPER UI COMPONENTS
 // ====================================================================================
 
-const Badge = ({ children, color = "bg-slate-700" }: {children: React.ReactNode, color?: string}) => (
+const Badge = ({ children, color = "bg-slate-700" }) => (
   <span className={`px-2 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider text-white ${color}`}>
     {children}
   </span>
 );
 
-const MetricCard = ({ label, value, unit, status, description }: any) => (
+const MetricCard = ({ label, value, unit, status, description }) => (
   <div className="bg-black/60 border border-slate-800 p-4 rounded-xl flex flex-col justify-between hover:border-slate-600 transition-all group">
     <div className="flex justify-between items-center">
       <span className="text-[10px] font-black uppercase tracking-widest text-slate-500">{label}</span>
@@ -1565,7 +1565,7 @@ const MetricCard = ({ label, value, unit, status, description }: any) => (
   </div>
 );
 
-const CourseReader = ({ course }: { course: NonNullable<LearningTopic['courseContent']> }) => {
+const CourseReader = ({ course }) => {
   const [activeChapter, setActiveChapter] = useState(course.chapters[0]);
 
   const formatText = (text: string) => {
