@@ -2,16 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom Scrollbar for that 'High-Tech' Console look */
-::-webkit-scrollbar {
-  width: 8px;
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark;
+  background-color: #020617;
 }
-::-webkit-scrollbar-track {
-  @apply bg-slate-950;
-}
-::-webkit-scrollbar-thumb {
-  @apply bg-slate-800 rounded-full border-2 border-slate-950;
-}
-::-webkit-scrollbar-thumb:hover {
-  @apply bg-slate-700;
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
 }
