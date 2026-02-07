@@ -106,7 +106,7 @@ const LEARNING_MODULES = [
           sections: [
             {
               title: "Physiology",
-              content: "**Systemic Inflammatory Response Syndrome (SIRS):**\n- Blood contacts artificial surfaces → Complement activation → Cytokine release → Vasoplegia/Capillary Leak.\n\n**Vasoplegia (Post-CPB Vasodilatory Shock):**\n- Incidence: 5-25%.\n- Mechanism: Cytokine-mediated vasodilation.\n- Presentation: Low SVR (<800), High CO, Hypotension.\n- Treatment: Vasopressin (first-line), Methylene blue."
+              content: "**Systemic Inflammatory Response Syndrome (SIRS):**\n- Blood contacts artificial surfaces -> Complement activation -> Cytokine release -> Vasoplegia/Capillary Leak.\n\n**Vasoplegia (Post-CPB Vasodilatory Shock):**\n- Incidence: 5-25%.\n- Mechanism: Cytokine-mediated vasodilation.\n- Presentation: Low SVR (<800), High CO, Hypotension.\n- Treatment: Vasopressin (first-line), Methylene blue."
             },
             {
               title: "Coagulopathy",
@@ -136,6 +136,28 @@ const LEARNING_MODULES = [
                 content: "**Graft Failure:** Acute MI pattern. Emergent Cath.\n**Atrial Fibrillation:** 30-40% incidence. Peak POD 2-4. Prophylaxis: Beta-blockers.\n**Pericarditis:** POD 7-14. Pleuritic pain, friction rub.\n**Sternal Wound Infection:** 1-3%. Risk: Diabetes, Obesity, Bilateral IMA."
               }
            ]
+        },
+        {
+          id: "04",
+          title: "Valve Surgery Essentials",
+          duration_min: 90,
+          sections: [
+            {
+              title: "Aortic Valve Replacement",
+              content: "**Indications:**\n- **Severe AS:** AVA <1.0 cm² with symptoms or EF <50%\n- **Severe AR:** Symptomatic or EF <50% or LV dilation\n\n**Types:**\n- **Mechanical:** Durable (lasts lifetime), requires lifelong anticoagulation (INR 2-3)\n  - St. Jude, On-X (newer, lower INR target)\n  - Choose in: Young patients (<60), no contraindication to anticoagulation\n- **Bioprosthetic:** Limited durability (10-15 years), no anticoagulation (just ASA)\n  - Porcine (Hancock, Carpentier-Edwards) or bovine pericardial (Perimount)\n  - Choose in: Elderly (>65), contraindication to anticoagulation, patient preference\n- **Ross Procedure:** Autograft (pulmonary valve to aortic position), homograft to pulmonary\n  - Young patients, avoids anticoagulation\n  - Complex, limited centers\n\n**Complications:**\n- **Paravalvular Leak:** Incomplete sealing → regurgitation, hemolysis\n- **Prosthetic Valve Endocarditis:** 1-3% risk, catastrophic\n- **Thrombosis:** Mechanical valves, presents as obstruction or embolism\n- **Structural Degeneration:** Bioprosthetic valves, eventually need redo or TAVR\n- **Patient-Prosthesis Mismatch:** Valve too small for patient size → persistent gradient",
+              clinical_pearl: "The choice of mechanical vs bio is a SHARED decision. Explain the tradeoffs clearly: anticoagulation forever vs. future reintervention."
+            },
+            {
+              title: "Mitral Valve Surgery",
+              content: "**Repair vs Replacement:**\n- **Repair Preferred:** Lower mortality, better LV function preservation, no anticoagulation\n- **Techniques:** Annuloplasty ring, chordal transfer, leaflet resection, neochordae\n- **Repair Success:** >95% in degenerative MR, lower in functional MR\n\n**Replacement Indications:**\n- Repair not feasible (rheumatic, endocarditis, heavy calcification)\n- Failed repair\n\n**Types:**\n- Same mechanical vs bioprosthetic considerations as AVR\n- Mitral position has higher gradients → patient-prosthesis mismatch more common\n\n**Complications:**\n- **SAM (Systolic Anterior Motion):** Leaflet obstructs LVOT → dynamic obstruction\n  - Treat: Volume, beta-blockers, reduce inotropes\n- **LV Rupture:** Rare but catastrophic, occurs if too much myocardium removed\n- **AV Block:** Proximity to conduction system",
+              clinical_pearl: "Mitral repair > replacement whenever possible. If the surgeon can't repair it, consider referring to a high-volume center."
+            },
+            {
+              title: "Tricuspid Valve Surgery",
+              content: "**Usually Repaired, Rarely Replaced:**\n- Annuloplasty ring most common\n- Indications: Severe TR with RV dysfunction, TR during left-sided valve surgery\n\n**Complications:**\n- **Heart Block:** Very common (proximity to AV node)\n- **Persistent TR:** Repair may not hold if severe RV dysfunction\n- **RV Failure:** Sudden increase in afterload post-repair",
+              clinical_pearl: "Tricuspid surgery is often done 'while we're in there' during other valve surgery. Make sure temporary pacing is ready - heart block is common."
+            }
+          ]
         }
       ]
     }
@@ -209,6 +231,55 @@ const LEARNING_MODULES = [
                content: "**Target:** >2.0. Essential for K+ retention. Anti-arrhythmic."
              }
           ]
+        },
+        {
+          id: "04",
+          title: "Arterial Blood Gas (ABG)",
+          duration_min: 60,
+          sections: [
+            {
+              title: "Interpretation Framework",
+              content: "**1. Oxygenation:** PaO2 <60 (Hypoxemia).\n**2. pH:** Acidemia vs Alkalemia.\n**3. Primary Process:** Respiratory vs Metabolic.\n**4. Compensation:** Appropriate?\n**5. Anion Gap:** Metabolic acidosis (MUDPILES).\n**6. Delta Gap:** Mixed disorders.",
+              clinical_pearl: "Always calculate the anion gap in acidemia."
+            },
+            {
+              title: "Common Scenarios",
+              content: "**Resp Acidosis:** Hypoventilation. Tx: Ventilation.\n**Resp Alkalosis:** Hyperventilation. Tx: Cause.\n**Met Acidosis:** Lactic (Shock), DKA, Uremia. Tx: Perfusion.\n**Met Alkalosis:** Volume depletion, Diuretics. Tx: Fluids/Acetazolamide.",
+              clinical_pearl: "Lactic acidosis is a sign of shock. Treat the shock, not the pH."
+            },
+            {
+              title: "Lactate",
+              content: "**Normal:** <2.0.\n**Elevated:** Tissue hypoxia (Type A) or other (Type B).\n**Clearance:** Predicts survival.\n**Critical:** >4.0 (Severe).",
+              clinical_pearl: "Lactate is your best friend in shock. Trend it."
+            },
+            {
+              title: "Base Deficit",
+              content: "**Definition:** Acid/base to normalize pH.\n**Use:** Mortality predictor in trauma, resuscitation guide.",
+              clinical_pearl: "Base deficit tells you how bad the shock is."
+            }
+          ]
+        },
+        {
+          id: "05",
+          title: "Renal Function & AKI",
+          duration_min: 75,
+          sections: [
+            {
+              title: "Acute Kidney Injury",
+              content: "**KDIGO Criteria:** Cr rise >=0.3 or 1.5x baseline, or low UOP.\n**Etiology:** Pre-renal (Hypoperfusion), Intra-renal (ATN/Toxins), Post-renal (Obstruction).\n**FeNa:** <1% (Pre-renal), >2% (ATN).",
+              clinical_pearl: "Most post-op AKI is pre-renal. Fix hemodynamics."
+            },
+            {
+              title: "Dialysis Indications",
+              content: "**AEIOU:** Acidosis, Electrolytes (K), Ingestion, Overload, Uremia.\n**Modalities:** HD (Stable), CRRT (Unstable/Shock), SLED (Hybrid).",
+              clinical_pearl: "Don't wait for extremis to start dialysis in shock."
+            },
+            {
+              title: "Nephrotoxin Avoidance",
+              content: "**Common:** NSAIDs, Aminoglycosides, Vancomycin, Contrast, ACEI/ARB.\n**Prevention:** Hydration, dosing.",
+              clinical_pearl: "An ounce of prevention is worth a pound of dialysis."
+            }
+          ]
         }
       ]
     }
@@ -252,6 +323,11 @@ const LEARNING_MODULES = [
             {
               title: "Waveform Analysis",
               content: "**Arterial:** Pulsus Paradoxus (Tamponade), Pulsus Alternans (LV Failure), Bisferiens (AR/AS).\n**CVP:** Giant a (Stenosis/Cannon), Giant v (TR), Loss of y (Tamponade).\n**PCWP:** Large v-waves (MR). Valid only in West Zone 3."
+            },
+             {
+              title: "Troubleshooting Invasive Lines",
+              content: "**Overdamping:** Air/clot/kink. Low SBP.\n**Underdamping:** Stiff tubing. High SBP.\n**PA Catheter:** Won't wedge, persistent wedge (danger!), position verification.",
+              clinical_pearl: "The PA catheter is a dying art, but useful. Use it right."
             }
           ]
         },
@@ -277,6 +353,11 @@ const LEARNING_MODULES = [
       **Stage D (Deteriorating):** Failing Stage C support. Rising lactate, increasing pressor requirements.
       **Stage E (Extremis):** Refractory arrest, pH < 7.2, profound collapse requiring VA-ECMO or CPR.`,
               clinical_pearl: "SCAI shock is the standard. Stage C needs inotropes. Stage D needs MCS."
+            },
+            {
+              title: "Mixed Shock States",
+              content: "Cardiogenic + Vasoplegic (Post-CPB). Cardiogenic + Hypovolemic. Septic + Cardiogenic. RV Failure + Hypovolemic.",
+              clinical_pearl: "Mixed shock is the rule. Treat what you see."
             }
           ]
         },
@@ -338,13 +419,11 @@ const LEARNING_MODULES = [
           sections: [
             {
               title: "Fick Principle",
-              content: "**Gold Standard:** CO = VO2 / (CaO2 - CvO2).\n**Concept:** If you know how much O2 the body uses, and how much O2 is taken out of each liter of blood, you can calculate how many liters flowed.\n**Utility:** Best for Low CO states and TR.",
-              clinical_pearl: "Fick is gold standard, use when thermodilution is suspect."
+              content: "**Gold Standard:** CO = VO2 / (CaO2 - CvO2).\n**Concept:** If you know how much O2 the body uses, and how much O2 is taken out of each liter of blood, you can calculate how many liters flowed.\n**Utility:** Best for Low CO states and TR."
             },
             {
               title: "Thermodilution",
-              content: "**Method:** Cold saline injection. Area under curve inversely related to CO.\n**Limitations:** Inaccurate in severe TR (recirculation) or Shunts.",
-              clinical_pearl: "Thermodilution is the workhorse. Check clinical correlation."
+              content: "**Method:** Cold saline injection. Area under curve inversely related to CO.\n**Limitations:** Inaccurate in severe TR (recirculation) or Shunts."
             },
             {
               title: "Determinants",
@@ -504,7 +583,7 @@ const LEARNING_MODULES = [
     courseContent: {
       level: 'fundamentals',
       estimated_hours: 8,
-      objectives: ["Manage ECMO", "Troubleshoot LVADs", "Select Device", "Recognize complications", "Weaning"],
+      objectives: ["Manage ECMO", "Troubleshoot LVADs"],
       chapters: [
         {
           id: "01",
@@ -513,28 +592,19 @@ const LEARNING_MODULES = [
           sections: [
             {
               title: "ECMO Configurations",
-              content: "**VA:** Cardiac + Resp. Bypasses heart/lungs. Increases Afterload.\n**VV:** Resp only. Bypasses lungs. Needs native heart.\n**Cannulation:** Peripheral (Fem-Fem) vs Central.\n**VAV:** Hybrid for Harlequin.",
-              clinical_pearl: "VA for heart, VV for lungs. If you need both, start VA and add V later (VAV)."
+              content: "**VA:** Cardiac + Resp. Bypasses heart/lungs. Increases Afterload.\n**VV:** Resp only. Bypasses lungs. Needs native heart.\n**Cannulation:** Peripheral (Fem-Fem) vs Central."
             },
             {
               title: "Harlequin Syndrome",
-              content: "**North-South Syndrome:** Peripheral VA ECMO + Native Heart Recovery + Lung Failure.\n**Pathophys:** Native heart pumps hypoxic blood to brain. ECMO pumps oxygenated blood to feet.\n**Tx:** V-AV ECMO, Vent recruitment, Central cannulation.",
-              clinical_pearl: "Monitor RIGHT radial arterial line."
+              content: "**North-South Syndrome:** Peripheral VA ECMO + Native Heart Recovery + Lung Failure.\n**Pathophys:** Native heart pumps hypoxic blood to brain. ECMO pumps oxygenated blood to feet.\n**Tx:** V-AV ECMO, Vent recruitment."
             },
             {
               title: "LV Distension",
-              content: "Retrograde flow shuts AV. LV fills but can't eject -> Pulmonary Edema.\n**Tx:** Inotropes, Venting (Impella/IABP/Septostomy), Reduce flow.",
-              clinical_pearl: "Achilles heel of VA ECMO. Vent early."
+              content: "Retrograde flow shuts AV. LV fills but can't eject -> Pulmonary Edema.\n**Tx:** Inotropes, Venting (Impella/IABP/Septostomy), Reduce flow."
             },
             {
               title: "Weaning VA",
-              content: "**Criteria:** LVEF >25%, Pulsatile, AV opening.\n**Trial:** Flow to 1.5 L/min. Clamp lines. Assess echo.",
-              clinical_pearl: "Go slow. Failed wean is disaster."
-            },
-            {
-               title: "ECMO Complications",
-               content: "Bleeding, Thrombosis, Infection, Stroke, Limb Ischemia (DPC), Hemolysis, Oxygenator failure.",
-               clinical_pearl: "Stay vigilant."
+              content: "**Criteria:** LVEF >25%, Pulsatile, AV opening.\n**Trial:** Flow to 1.5 L/min. Clamp lines. Assess echo."
             }
           ]
         },
@@ -544,35 +614,21 @@ const LEARNING_MODULES = [
           duration_min: 90,
           sections: [
             {
-              title: "LVAD Types & Physiology",
-               content: "**Continuous Flow:** Axial (HMII) or Centrifugal (HM3/HVAD).\n- **HM3:** Magnetically levitated, artificial pulse.\n- **Physiology:** Preload dependent, Afterload sensitive.\n- **Native Heart:** RV must function to fill LVAD.",
-               clinical_pearl: "Think in terms of flows, not EF."
-            },
-            {
-               title: "Parameters",
-               content: "Speed (Set), Flow (Est), Power (Measured), PI (Pulsatility).",
-               clinical_pearl: "Power is your friend."
+              title: "Pump Physiology",
+               content: "Speed (RPM) set by user. Flow estimated. Power measured. H-Q Curve relates pressure/flow."
             },
             {
               title: "Pump Thrombosis",
-              content: "**Triad:** High Power + Low Flow + Hemolysis (LDH > 1000).\n**Tx:** Anticoagulation, Exchange.",
-              clinical_pearl: "LDH > 1000 is thrombosis."
+              content: "**Triad:** High Power + Low Flow + Hemolysis (LDH > 1000).\n**Tx:** Anticoagulation, Exchange."
             },
             {
               title: "Suction Events",
-              content: "**Signs:** Low Flow, Low Power, Low PI.\n**Causes:** Hypovolemia, RV Failure, Tamponade.\n**Tx:** Volume, Reduce Speed.",
-              clinical_pearl: "Reduce speed first."
+              content: "**Signs:** Low Flow, Low Power, Low PI.\n**Causes:** Hypovolemia, RV Failure, Tamponade.\n**Tx:** Volume, Reduce Speed."
             },
              {
               title: "RV Failure",
-              content: "Common early. Septal shift distorts RV. \n**Signs:** High CVP, Low Flow.\n**Tx:** Milrinone, iNO, RVAD.",
-              clinical_pearl: "Treat early."
+              content: "Common early. Septal shift distorts RV. \n**Signs:** High CVP, Low Flow.\n**Tx:** Milrinone, iNO, RVAD."
             },
-             {
-               title: "BP Management",
-               content: "Doppler MAP 70-80.",
-               clinical_pearl: "Use Doppler."
-             },
              {
                title: "Ramp Study",
                content: "Adjust speed in steps. Echo + Cath. Optimal: Intermittent AV opening, midline septum, PCWP < 15."
@@ -1614,7 +1670,8 @@ export default function App() {
 
   const metrics = useMemo(() => {
     const safePreload = Math.max(1, physio.preload);
-    const effectiveContractility = Math.max(0.04, physio.contractility);
+    const septalShiftPenalty = Math.max(0, (safePreload - 18) * 0.03);
+    const effectiveContractility = Math.max(0.04, physio.contractility - septalShiftPenalty);
     
     const sv = (safePreload * 6.8) * effectiveContractility;
     const co = (sv * physio.hr) / 1000;
@@ -1654,7 +1711,7 @@ export default function App() {
   }, [metrics, examMode, activeCase]);
 
   const generateCase = () => {
-    const template = SIMULATION_CASES[Math.floor(Math.random() * SIMULATION_CASES.length)];
+    const template = CASE_TEMPLATES[Math.floor(Math.random() * CASE_TEMPLATES.length)];
     setActiveCase(template);
     setPhysio({ 
       hr: template.initialPhysio?.hr || 90, 
@@ -1757,13 +1814,13 @@ export default function App() {
                     <Target size={20} className="text-blue-500"/> Procedural Scenarios
                   </h3>
                   <div className="grid grid-cols-2 gap-4">
-                      {SIMULATION_CASES.slice(0, 4).map((c, i) => (
-                        <button key={i} onClick={() => { setActiveCase(c); setPhysio(c.initialPhysio || {hr: 90, preload: 12, contractility: 0.5, svr: 1200, pap: 25}); setView('simulator'); }} className="p-5 bg-slate-900 border border-slate-800 rounded-3xl text-left hover:border-blue-500 transition-all group relative overflow-hidden">
+                      {CASE_TEMPLATES.map((c, i) => (
+                        <button key={i} onClick={generateCase} className="p-5 bg-slate-900 border border-slate-800 rounded-3xl text-left hover:border-blue-500 transition-all group relative overflow-hidden">
                           <div className="absolute top-0 right-0 p-3 opacity-10 group-hover:opacity-100 group-hover:text-blue-500 transition-opacity">
                             <FastForward size={32} />
                           </div>
                           <div className="text-[10px] font-black text-blue-500 uppercase mb-1 tracking-widest">{c.module}</div>
-                          <div className="font-black text-lg mb-2 leading-tight uppercase tracking-tight">{c.title}</div>
+                          <div className="font-black text-lg mb-2 leading-tight uppercase tracking-tight">{c.type}</div>
                           <div className="flex items-center gap-3 text-[10px] text-slate-500 font-black uppercase tracking-widest">
                              <span className="flex items-center gap-1"><Clock size={10}/> 15M</span>
                              <span className="flex items-center gap-1 text-yellow-500"><ShieldAlert size={10}/> ADHANCED</span>
@@ -1820,7 +1877,7 @@ export default function App() {
                     <div className="flex-1">
                        <h4 className="text-blue-400 text-[10px] font-black uppercase tracking-widest mb-1">Teaching Physiology</h4>
                        <p className="text-base font-black text-slate-200 uppercase tracking-tight">
-                         {activeCase?.physiology}
+                         {activeCase?.goal || activeCase?.targets ? `TARGET: MAP > ${activeCase?.targets?.map || 65}${activeCase?.targets?.ci ? `, CI > ${activeCase.targets.ci}` : ''}` : "Identify the etiology and intervene."}
                        </p>
                        <p className="text-xs text-slate-500 mt-2 italic font-bold tracking-tight">COGNITIVE TRAP: {activeCase?.trap}</p>
                     </div>
